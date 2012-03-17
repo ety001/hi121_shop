@@ -1,0 +1,26 @@
+<div class="plugintop">提出申请或已经兑换商品列表</div>
+<div style="padding:10px;">
+<table>
+<tr>
+	<td>兑换物品</td>
+	<td>数量</td>
+	<td>审核状态</td>
+</tr>
+	<!--{loop $products $val}-->
+<tr>
+	<td><a href="index.php?mod=plugin&plugin=club121_shop:credit_shop&sid={$val['product_id']}">{$val['title']}</a></td>
+	<td>{$val['num']}</td>
+	<td>
+	<!--{if $val['auth']==2}-->
+		审核通过
+	<!--{elseif $val['auth']==1}-->
+		正在审核
+	<!--{else}-->
+    	审核失败
+	<!--{/if}-->
+	</td>
+</tr>
+<!--{/loop}-->
+</table>
+<div style="color: red;font-size: 14px;">请一定要填写好您的<a href="http://127.0.0.1/index.php?mod=settings">个人信息（学号和邮箱地址）</a>，以便我们的工作人员联系您。</div>
+</div>

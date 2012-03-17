@@ -1,0 +1,37 @@
+<!--{if is_array($product_info)}-->
+<div class="plugintop">{$product_info['title']}<span style="font-size: 12px;margin-left: 40px;"><a href="{$club_shop[0]['url']}">返回上层</a></span></div>
+<div style="padding:15px;">
+<form action="{$club_shop[1]['url']}&shop_op=apply&sid={$product_info['id']}&require=topic" method="post" name="theform">
+<table width="100%" border="1">
+<input type="hidden" name="product_id" value="{$product_info['id']}" />
+<input type="hidden" name="uid" value="{MEMBER_ID}" />
+<input type="hidden" name="auth" value="1" />
+<tr><td width="120">商家</td><td>{$product_info['name']}</td></tr>
+<tr><td width="120">兑换品图片</td><td><img src="{$product_info['pic']}" /></td></tr>
+<tr><td>是否认证</td><td><!--{if $product_info['auth'] == '1'}-->已审核<!--{else}-->未审核<!--{/if}--></td></tr>
+<tr><td>兑奖品数量</td><td>{$product_info['total']}</td></tr>
+<input type="hidden" name="product_num" value="{$product_info['total']}"/>
+<tr><td>需要积分</td><td>{$product_info['credit']}</td></tr>
+<input type="hidden" name="credit" value="{$product_info['credit']}"/>
+<tr><td>结束时间</td><td>{$product_info['time']}</td></tr>
+<tr><td>兑换品介绍</td><td>{$product_info['description']}</td></tr>
+<tr><td>&nbsp;</td><td><input type="submit" value="申请兑换">&nbsp;<input type="text" name="num" value="1" />份</td></tr>
+<tr><td>注意事项</td><td>1、申请提交后不可撤回。<br />2、请务必填在您的个人资料中填写好您的学号和联系方式，以便工作人员与您取得联系。因您本人缘故导致兑换失败，责任自负！</td></tr>
+</table>
+</form>
+</div>
+<!--{else}-->
+<div class="plugintop">121积分商城</div>
+<div class="ulist ulist6"> 
+<!--{loop $products $val}-->				
+<div class="pf2 selected crPer">
+	<p class="mark"></p>
+	<p class="avt"><a href="{$club_shop[0]['url']}&sid={$val['id']}"><img src="{$val['pic']}" /></a></p> 
+	<p class="nm"><a href="{$club_shop[0]['url']}&sid={$val['id']}">{$val['title']}</a></p> 
+	<p class="nm">积分：{$val['credit']}</p>
+	<p class="nm">剩余：{$val['total']}</p>
+	<p class="nm">截止：{$val['time']}</p>
+</div>
+<!--{/loop}-->
+</div>
+<!--{/if}-->

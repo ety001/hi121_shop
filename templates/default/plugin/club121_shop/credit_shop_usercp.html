@@ -1,0 +1,37 @@
+<div id="main_wp" class="mt10">
+<form action="admin.php?mod=plugin&code=manage&id={$pluginid}&identifier=club121_shop&pmod=credit_shop_usercp&shop_op=del" method="post" name="theform">
+<table cellspacing="1" width="100%" align="center" class="tableborder tl">
+	<tr class="header">
+		<td colspan="9">{$pluginname}申请审核管理</td>
+	</tr>
+	<tr class="list_h_2">
+		<td width="50"><input type="checkbox" name="chkall" class="checkbox" onclick="checkall(this.form,'delete')" />删?</td>
+		<td>兑换品</td>
+		<td>商家</td>
+		<td>需要积分</td>
+		<td>申请人</td>
+		<td>申请数量</td>
+		<td>结束日期</td>
+		<td>申请状态</td>
+		<td>操作</td>
+	</tr>
+	<!--{loop $products $val}-->
+		<tr>
+			<td class="td2"><input type="checkbox" class="checkbox" name="delete[]" value="{$val['id']}"></td>
+			<td class="td2">{$val['title']}</td>
+			<td class="td2">{$val['name']}</td>
+			<td class="td2">{$val['credit']}</td>
+			<td class="td2">{$val['nickname']}</td>
+			<td class="td2">{$val['num']}</td>
+			<td class="td2">{$val['time']}</td>
+			<td class="td2"><!--{if $val['auth']==2}-->已审核<!--{elseif $val['auth']==1}-->等待审核<!--{else}-->拒绝<!--{/if}--></td>
+			<td class="td2"><!--{if $val[auth]==1}--><a href="admin.php?mod=plugin&code=manage&id={$pluginid}&identifier=club121_shop&pmod=credit_shop_usercp&shop_op=apply&sid={$val['id']}">通过审核</a>&nbsp;<a href="admin.php?mod=plugin&code=manage&id={$pluginid}&identifier=club121_shop&pmod=credit_shop_usercp&shop_op=refuse&sid={$val['id']}&num={$val['num']}&credit={$val['credit']}&total={$val['total']}&credit_total={$val['credit_total']}&product_id={$val['product_id']}&uid={$val['uid']}">拒绝</a><!--{/if}--></td>
+		</tr>
+	<!--{/loop}-->
+	<!--{if $pages}-->
+	<tr><td colspan="9">{$pages}</td></tr>
+	<!--{/if}-->
+</table>
+<center><input class="button" type="submit" name="setting_submit" value="提 交"></center>
+</form>
+</div> 

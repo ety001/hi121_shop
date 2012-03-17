@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[JishiGou! Plugin]]></item>
+	<item id="Version"><![CDATA[3.0.3]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[0]]></item>
+			<item id="name"><![CDATA[121»ý·ÖÉÌ³Ç]]></item>
+			<item id="identifier"><![CDATA[club121_shop]]></item>
+			<item id="description"><![CDATA[121»ý·ÖÉÌ³Ç]]></item>
+			<item id="directory"><![CDATA[club121_shop/]]></item>
+			<item id="copyright"><![CDATA[<a href=www.domyself.me>ETY001</a>ÖÆ×÷]]></item>
+			<item id="version"><![CDATA[1.0.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="modtype"><![CDATA[1]]></item>
+					<item id="mod_file"><![CDATA[credit_shop]]></item>
+					<item id="mod_name"><![CDATA[»ý·ÖÉÌ³Ç]]></item>
+					<item id="role_id"><![CDATA[3]]></item>
+				</item>
+				<item id="1">
+					<item id="modtype"><![CDATA[3]]></item>
+					<item id="mod_file"><![CDATA[credit_shop_cp]]></item>
+					<item id="mod_name"><![CDATA[»ý·ÖÉÌ³Ç¶Ò»»¼ÇÂ¼]]></item>
+					<item id="role_id"><![CDATA[3]]></item>
+				</item>
+				<item id="2">
+					<item id="modtype"><![CDATA[4]]></item>
+					<item id="mod_file"><![CDATA[credit_shop_admincp]]></item>
+					<item id="mod_name"><![CDATA[¶Ò»»Æ·¹ÜÀí]]></item>
+					<item id="role_id"><![CDATA[7]]></item>
+				</item>
+				<item id="3">
+					<item id="modtype"><![CDATA[4]]></item>
+					<item id="mod_file"><![CDATA[credit_shop_usercp]]></item>
+					<item id="mod_name"><![CDATA[ÉêÇëÉóºË]]></item>
+					<item id="role_id"><![CDATA[7]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[ÉÌ³Ç»õ±Ò]]></item>
+				<item id="description"><![CDATA[´ÓÒÑÓÐµÄ»ý·Ö»õ±ÒÖÐÑ¡Ôñ×÷ÎªÉÌ³ÇµÄ»õ±Ò]]></item>
+				<item id="variable"><![CDATA[credit_standard]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="extra"><![CDATA[1 = extcredits1
+2 = extcredits2
+3 = extcredits3
+4 = extcredits4
+5 = extcredits5
+6 = extcredits6
+7 = extcredits7
+8 = extcredits8]]></item>
+			</item>
+		</item>
+	</item>
+	<item id="installfile"><![CDATA[install.php]]></item>
+</root>
